@@ -9,22 +9,25 @@
 <body style="background-color: #e0e0e0">
 
 
-    <div class="w-1/2 mx-auto mt-20">
+    <div class="w-3/4 mx-auto mt-20 flex flex-row">
 
-        <label for="textArea">Example text box</label>
-        <textarea id="textArea" class="w-full p-3 resize-none shadow" rows="10" placeholder="Write text here">Example text is here.</textarea>
+        <div class="w-1/2 flex-none">
+            <label for="textArea">Example text box</label>
+            <textarea id="textArea" class="w-full p-3 resize-none shadow" rows="10" placeholder="Write text here">Example text is here.</textarea>
 
-        <div id="buttonMenu">
-            <button class="px-2 py-1 bg-gray-400 hover:bg-gray-500 shadow hover:text-white font-bold" data-actions="bold">B</button>
-            <button class="px-2 py-1 bg-gray-400 hover:bg-gray-500 shadow hover:text-white italic" data-actions="italic">I</button>
-            <button class="px-2 py-1 bg-gray-400 hover:bg-gray-500 shadow hover:text-white underline" data-actions="underline">U</button>
+            <div id="buttonMenu">
+                <button class="px-2 py-1 bg-gray-400 hover:bg-gray-500 shadow hover:text-white font-bold" data-actions="bold">B</button>
+                <button class="px-2 py-1 bg-gray-400 hover:bg-gray-500 shadow hover:text-white italic" data-actions="italic">I</button>
+                <button class="px-2 py-1 bg-gray-400 hover:bg-gray-500 shadow hover:text-white underline" data-actions="underline">U</button>
+                <button class="px-2 py-1 bg-gray-400 hover:bg-gray-500 shadow hover:text-white" data-actions="h1">H1</button>
+            </div>
         </div>
 
-
-
-
-        <div class="mt-20" id="preview">
-            <!-- result preview -->
+        <div class="1/2 ml-5 flex-none">
+            Preview
+            <div class="p-3 text-wrap" id="preview">
+                <!-- result preview -->
+            </div>
         </div>
 
     </div>

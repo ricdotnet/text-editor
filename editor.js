@@ -18,6 +18,9 @@ menu.addEventListener('click', event => {
             case 'underline':
                 setUnderline()
                 break;
+            case 'h1':
+                setTitle1()
+                break;
         }
 
     }
@@ -32,6 +35,9 @@ const setItalic = () => {
 }
 const setUnderline = () => {
     selection('underline')
+}
+const setTitle1 = () => {
+    selection('h1')
 }
 
 
@@ -52,6 +58,18 @@ const selection = (type) => {
     if(type === 'underline') {
         replace = '<u>' + currentSelection + '</u>';
     }
+    if(type === 'h1') {
+        replace = '<h1 style="font-size: 28px">' + currentSelection + '</h1>';
+    }
+
+
+    if(type === 'Enter') {
+        if(selectionStart === length) {
+            replace = '\n<br>';
+        } else {
+            replace = '\n<br>';
+        }
+    }
 
     textArea.value = textArea.value.substr(0, selectionStart) + replace + textArea.value.substr(selectionEnd, length);
 
@@ -60,7 +78,7 @@ const selection = (type) => {
 //add a <br> tag on enter click
 textArea.addEventListener('keydown', event => {
     if(event.key === 'Enter') {
-        textArea.value += '<br>';
+        selection(event.key)
     }
 })
 
