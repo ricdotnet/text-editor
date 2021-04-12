@@ -57,5 +57,17 @@ const selection = (type) => {
 
 }
 
+//add a <br> tag on enter click
+textArea.addEventListener('keydown', event => {
+    if(event.key === 'Enter') {
+        textArea.value += '<br>';
+    }
+})
+
 
 //code for preview - to be removed later
+let preview = document.getElementById('preview');
+preview.innerHTML = textArea.value;
+textArea.addEventListener('keyup', event => {
+    preview.innerHTML = textArea.value;
+})
