@@ -21,6 +21,9 @@ menu.addEventListener('click', event => {
             case 'h1':
                 setTitle1()
                 break;
+            case 'img':
+                setImage()
+                break;
         }
 
     }
@@ -38,6 +41,9 @@ const setUnderline = () => {
 }
 const setTitle1 = () => {
     selection('h1')
+}
+const setImage = () => {
+    selection('img')
 }
 
 
@@ -60,6 +66,9 @@ const selection = (type) => {
     }
     if(type === 'h1') {
         replace = '<h1 style="font-size: 28px">' + currentSelection + '</h1>';
+    }
+    if(type === 'img') {
+        replace = '<img src="' + currentSelection + '" alt="image" />';
     }
 
 
@@ -84,8 +93,8 @@ textArea.addEventListener('keydown', event => {
 
 
 //code for preview - to be removed later
-let preview = document.getElementById('preview');
-preview.innerHTML = textArea.value;
-textArea.addEventListener('keyup', event => {
-    preview.innerHTML = textArea.value;
-})
+// let preview = document.getElementById('preview');
+// preview.innerHTML = textArea.value;
+// textArea.addEventListener('keyup', event => {
+//     preview.innerHTML = textArea.value;
+// })
