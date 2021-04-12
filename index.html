@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Editor</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body style="background-color: #e0e0e0">
+
+
+    <div class="w-1/2 mx-auto mt-20">
+
+        <label for="textArea">Example text box</label>
+        <textarea id="textArea" class="w-full p-3 resize-none shadow" rows="10" placeholder="Write text here">Example text is here.</textarea>
+
+        <div id="buttonMenu">
+            <button class="px-2 py-1 bg-gray-400 hover:bg-gray-500 shadow hover:text-white font-bold" data-actions="bold">B</button>
+            <button class="px-2 py-1 bg-gray-400 hover:bg-gray-500 shadow hover:text-white italic" data-actions="italic">I</button>
+            <button class="px-2 py-1 bg-gray-400 hover:bg-gray-500 shadow hover:text-white underline" data-actions="underline">U</button>
+        </div>
+
+    </div>
+
+
+    <div id="preview"><pre>
+        <!-- result preview -->
+
+    </pre></div>
+
+
+    <script type="text/javascript" src="editor.js" ></script>
+
+</body>
+</html>
