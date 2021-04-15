@@ -3,3 +3,6 @@ small javascript text editor. enables insertion of html marquee code into a text
 
 ### working demo
 https://ricdotnet.github.io/text-editor/
+
+---
+Built using tailwindcss in phpstorm.
